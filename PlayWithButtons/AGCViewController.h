@@ -10,4 +10,10 @@
 
 @interface AGCViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *buttonText;
+@property (strong, nonatomic) IBOutlet UILabel  *textBox;
+@property (strong, nonatomic) IBOutlet UILabel  *altTextBox;
+
+- (IBAction)buttonPress:(id)sender;
+
 @end

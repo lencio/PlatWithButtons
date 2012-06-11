@@ -17,6 +17,7 @@
 @synthesize textBox;
 @synthesize altTextBox;
 
+
 /*- (IBAction)buttonPress:(id)sender {
     if (self.textBox.tag == 0) {
         self.textBox.tag = 1;
@@ -33,7 +34,7 @@
 
 - (IBAction)buttonPress:(id)sender {
     AGCButtonController *pressButton = [[AGCButtonController alloc] init];
-    [pressButton toggleLabel];
+    self.textBox.tag = [pressButton toggleLabel:self.textBox.tag];
     self.textBox.text = [pressButton ctrlTextBox];
     self.altTextBox.text= [pressButton ctrlAltTextBox];
     [buttonText setTitle:[pressButton ctrlButtonText] forState:UIControlStateNormal];    

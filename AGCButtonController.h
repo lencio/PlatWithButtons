@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+// #import "AGCViewController.h"
 
-@interface AGCButtonController : NSObject
+@interface AGCButtonController : NSObject {
+    int textBoxTag;
+}
 
-@property BOOL textBoxTag;
+//@property int textBoxTag;
 @property (nonatomic, retain) NSString* ctrlTextBox;
 @property (nonatomic, retain) NSString* ctrlAltTextBox;
 @property (nonatomic, retain) NSString* ctrlButtonText;
 
--(void) toggleLabel;
+-(int) toggleLabel: (int)tag;
 
 @end

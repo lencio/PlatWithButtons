@@ -10,10 +10,12 @@
 
 @implementation AGCButtonController
 
-@synthesize ctrlTextBox, textBoxTag, ctrlAltTextBox, ctrlButtonText;
+@synthesize ctrlTextBox, ctrlAltTextBox, ctrlButtonText;
 
--(void) toggleLabel; {
-//    NSLog(@"%@", self.textBox.text);
+-(int) toggleLabel: (int)tag 
+{
+    textBoxTag = tag;
+
     if (textBoxTag == 0) {
         textBoxTag = 1;
         ctrlTextBox = @"Goodbye World!";
@@ -25,6 +27,7 @@
         ctrlAltTextBox = @"GoodBye World!";
         ctrlButtonText = @"Hello World!";
     }
+    return textBoxTag;
 }
  
 

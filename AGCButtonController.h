@@ -10,4 +10,11 @@
 
 @interface AGCButtonController : NSObject
 
+@property BOOL textBoxTag;
+@property (nonatomic, retain) NSString* ctrlTextBox;
+@property (nonatomic, retain) NSString* ctrlAltTextBox;
+@property (nonatomic, retain) NSString* ctrlButtonText;
+
+-(void) toggleLabel;
+
 @end

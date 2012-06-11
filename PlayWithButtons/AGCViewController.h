@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGCViewController.h"
+#import "AGCButtonController.h"
+
 
 @interface AGCViewController : UIViewController
 

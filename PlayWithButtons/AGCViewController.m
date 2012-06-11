@@ -17,7 +17,7 @@
 @synthesize textBox;
 @synthesize altTextBox;
 
-- (IBAction)buttonPress:(id)sender {
+/*- (IBAction)buttonPress:(id)sender {
     if (self.textBox.tag == 0) {
         self.textBox.tag = 1;
         self.textBox.text = @"Goodbye World!";
@@ -29,6 +29,14 @@
         self.altTextBox.text = @"GoodBye World!";
         [buttonText setTitle:@"Hello World!" forState:UIControlStateNormal];
     }
+}*/
+
+- (IBAction)buttonPress:(id)sender {
+    AGCButtonController *pressButton = [[AGCButtonController alloc] init];
+    [pressButton toggleLabel];
+    self.textBox.text = [pressButton ctrlTextBox];
+    self.altTextBox.text= [pressButton ctrlAltTextBox];
+    [buttonText setTitle:[pressButton ctrlButtonText] forState:UIControlStateNormal];    
 }
 
 - (void)viewDidLoad

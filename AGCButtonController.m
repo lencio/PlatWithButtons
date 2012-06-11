@@ -10,17 +10,22 @@
 
 @implementation AGCButtonController
 
-- (IBAction)buttonPress:(id)sender {
-    if (self.textBox.tag == 0) {
-        self.textBox.tag = 1;
-        self.textBox.text = @"Goodbye World!";
-        [buttonText setTitle:@"GoodBye World!" forState:UIControlStateNormal];
-        self.altTextBox.text = @"Hello World!";
+@synthesize ctrlTextBox, textBoxTag, ctrlAltTextBox, ctrlButtonText;
+
+-(void) toggleLabel; {
+//    NSLog(@"%@", self.textBox.text);
+    if (textBoxTag == 0) {
+        textBoxTag = 1;
+        ctrlTextBox = @"Goodbye World!";
+        ctrlButtonText = @"GoodBye World!"; 
+        ctrlAltTextBox = @"Hello World!";
     } else {
-        self.textBox.tag = 0;
-        self.textBox.text = @"Hello World!";
-        self.altTextBox.text = @"GoodBye World!";
-        [buttonText setTitle:@"Hello World!" forState:UIControlStateNormal];
+        textBoxTag = 0;
+        ctrlTextBox = @"Hello World!";
+        ctrlAltTextBox = @"GoodBye World!";
+        ctrlButtonText = @"Hello World!";
     }
 }
+ 
+
 @end

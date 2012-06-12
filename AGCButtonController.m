@@ -8,26 +8,34 @@
 
 #import "AGCButtonController.h"
 
+@interface AGCButtonController (){
+    
+}
+//@property (nonatomic) NSUInteger textBoxTag;
+
+@end
+
 @implementation AGCButtonController
 
-@synthesize ctrlTextBox, ctrlAltTextBox, ctrlButtonText;
+@synthesize textBoxTag, ctrlTextBox, ctrlAltTextBox, ctrlButtonText;
 
--(int) toggleLabel: (int)tag 
+-(void) toggleLabel
 {
-    textBoxTag = tag;
+//    textBoxTag = tag;
+//    NSLog(@"textBoxTag %i", self.textBoxTag);
 
-    if (textBoxTag == 0) {
-        textBoxTag = 1;
-        ctrlTextBox = @"Goodbye World!";
-        ctrlButtonText = @"GoodBye World!"; 
-        ctrlAltTextBox = @"Hello World!";
+    if (self.textBoxTag == 0) {
+        self.textBoxTag = 1;
+        self.ctrlTextBox = @"Goodbye World!";
+        self.ctrlButtonText = @"GoodBye World!"; 
+        self.ctrlAltTextBox = @"Hello World!";
     } else {
-        textBoxTag = 0;
-        ctrlTextBox = @"Hello World!";
-        ctrlAltTextBox = @"GoodBye World!";
-        ctrlButtonText = @"Hello World!";
+        self.textBoxTag = 0;
+        self.ctrlTextBox = @"Hello World!";
+        self.ctrlAltTextBox = @"GoodBye World!";
+        self.ctrlButtonText = @"Hello World!";
     }
-    return textBoxTag;
+//    return textBoxTag;
 }
  
 

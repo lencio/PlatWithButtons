@@ -17,6 +17,7 @@
 @synthesize textBox;
 @synthesize altTextBox;
 
+@synthesize buttonSwitcher;
 
 /*- (IBAction)buttonPress:(id)sender {
     if (self.textBox.tag == 0) {
@@ -33,17 +34,26 @@
 }*/
 
 - (IBAction)buttonPress:(id)sender {
-    AGCButtonController *pressButton = [[AGCButtonController alloc] init];
+/*    AGCButtonController *pressButton = [[AGCButtonController alloc] init];
     self.textBox.tag = [pressButton toggleLabel:self.textBox.tag];
     self.textBox.text = [pressButton ctrlTextBox];
     self.altTextBox.text= [pressButton ctrlAltTextBox];
     [buttonText setTitle:[pressButton ctrlButtonText] forState:UIControlStateNormal];    
+*/
+    [self.buttonSwitcher toggleLabel];
+//    NSLog(@"textBoxTag %i", self.buttonSwitcher.textBoxTag);
+    self.textBox.text = [self.buttonSwitcher ctrlTextBox];
+    self.altTextBox.text = [self.buttonSwitcher ctrlAltTextBox];
+    [buttonText setTitle:[self.buttonSwitcher ctrlButtonText] forState:UIControlStateNormal];
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.buttonSwitcher = [[AGCButtonController alloc] init];
+
 }
 
 - (void)viewDidUnload

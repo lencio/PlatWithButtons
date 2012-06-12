@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AGCViewController.h"
+// #import "AGCViewController.h"
 #import "AGCButtonController.h"
 
 
@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonText;
 @property (strong, nonatomic) IBOutlet UILabel  *textBox;
 @property (strong, nonatomic) IBOutlet UILabel  *altTextBox;
+
+@property (strong, nonatomic) AGCButtonController *buttonSwitcher;
 
 - (IBAction)buttonPress:(id)sender;
 

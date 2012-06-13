@@ -19,29 +19,9 @@
 
 @synthesize buttonSwitcher;
 
-/*- (IBAction)buttonPress:(id)sender {
-    if (self.textBox.tag == 0) {
-        self.textBox.tag = 1;
-        self.textBox.text = @"Goodbye World!";
-        [buttonText setTitle:@"GoodBye World!" forState:UIControlStateNormal];
-        self.altTextBox.text = @"Hello World!";
-    } else {
-        self.textBox.tag = 0;
-        self.textBox.text = @"Hello World!";
-        self.altTextBox.text = @"GoodBye World!";
-        [buttonText setTitle:@"Hello World!" forState:UIControlStateNormal];
-    }
-}*/
 
 - (IBAction)buttonPress:(id)sender {
-/*    AGCButtonController *pressButton = [[AGCButtonController alloc] init];
-    self.textBox.tag = [pressButton toggleLabel:self.textBox.tag];
-    self.textBox.text = [pressButton ctrlTextBox];
-    self.altTextBox.text= [pressButton ctrlAltTextBox];
-    [buttonText setTitle:[pressButton ctrlButtonText] forState:UIControlStateNormal];    
-*/
     [self.buttonSwitcher toggleLabel];
-//    NSLog(@"textBoxTag %i", self.buttonSwitcher.textBoxTag);
     self.textBox.text = [self.buttonSwitcher ctrlTextBox];
     self.altTextBox.text = [self.buttonSwitcher ctrlAltTextBox];
     [buttonText setTitle:[self.buttonSwitcher ctrlButtonText] forState:UIControlStateNormal];

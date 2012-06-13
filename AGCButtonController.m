@@ -21,9 +21,6 @@
 
 -(void) toggleLabel
 {
-//    textBoxTag = tag;
-//    NSLog(@"textBoxTag %i", self.textBoxTag);
-
     if (self.textBoxTag == 0) {
         self.textBoxTag = 1;
         self.ctrlTextBox = @"Goodbye World!";
@@ -35,7 +32,6 @@
         self.ctrlAltTextBox = @"GoodBye World!";
         self.ctrlButtonText = @"Hello World!";
     }
-//    return textBoxTag;
 }
  
 
